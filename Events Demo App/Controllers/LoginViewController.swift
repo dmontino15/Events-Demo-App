@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  LoginViewController.swift
 //  Events Demo App
 //
 //  Created by Daniella Montinola on 12/2/19.
@@ -9,28 +9,26 @@
 import UIKit
 import Parse
 
-
-class SignUpViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     
     // MARK: - Properties
 
-    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     
     // MARK: - FUNCTIONS
+    
 
-    @IBAction func onSignup(_ sender: Any) {
-        let user = PFUser()
-        user.username = usernameField.text
-        user.password = passwordField.text
-        user.email = emailField.text
-
-        user.signUpInBackground { (success, error) in
-            if success {
-                self.performSegue(withIdentifier: "signupSegue", sender: nil)
+    
+    @IBAction func onLogin(_ sender: Any) {
+        let username = usernameField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
             }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		CE4CF226239628AD001B598A /* Events_Demo_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CF225239628AD001B598A /* Events_Demo_AppTests.swift */; };
 		CE4CF231239628AD001B598A /* Events_Demo_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CF230239628AD001B598A /* Events_Demo_AppUITests.swift */; };
 		CE4CF24223962A78001B598A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CF24123962A78001B598A /* SignUpViewController.swift */; };
+		CE4CF24423962F83001B598A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CF24323962F83001B598A /* LoginViewController.swift */; };
+		CE4CF24623971C46001B598A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CF24523971C46001B598A /* HomeViewController.swift */; };
 		DBB9FBD09A6C3BD7D7498DD2 /* Pods_Events_Demo_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECCAAFAF10EBAEC25DA96D6 /* Pods_Events_Demo_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		CE4CF230239628AD001B598A /* Events_Demo_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events_Demo_AppUITests.swift; sourceTree = "<group>"; };
 		CE4CF232239628AD001B598A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE4CF24123962A78001B598A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE4CF24323962F83001B598A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE4CF24523971C46001B598A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D6336E46B60B9B19EC2C9910 /* Pods-Events Demo App-Events Demo AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events Demo App-Events Demo AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Events Demo App-Events Demo AppUITests/Pods-Events Demo App-Events Demo AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FBA7B4559D510BC87572F80C /* Pods-Events Demo App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events Demo App.debug.xcconfig"; path = "Target Support Files/Pods-Events Demo App/Pods-Events Demo App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +115,6 @@
 				3C684B5C95FF4243C6D8BB07 /* Pods-Events Demo AppTests.debug.xcconfig */,
 				8A4B2A581EBD477195F79A3A /* Pods-Events Demo AppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				CE4CF24123962A78001B598A /* SignUpViewController.swift */,
+				CE4CF24323962F83001B598A /* LoginViewController.swift */,
+				CE4CF24523971C46001B598A /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -432,6 +437,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4CF24623971C46001B598A /* HomeViewController.swift in Sources */,
+				CE4CF24423962F83001B598A /* LoginViewController.swift in Sources */,
 				CE4CF24223962A78001B598A /* SignUpViewController.swift in Sources */,
 				CE4CF20F239628AB001B598A /* AppDelegate.swift in Sources */,
 				CE4CF211239628AB001B598A /* SceneDelegate.swift in Sources */,
