@@ -44,12 +44,13 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yX-aZ-1hb">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yX-aZ-1hb" customClass="signupSegue">
                                 <rect key="frame" x="64" y="419" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="SIGN UP"/>
                                 <connections>
                                     <action selector="onSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="See-T5-ST1"/>
+                                    <segue destination="OPn-HM-xoE" kind="presentation" identifier="signupSegue" id="tBN-Xf-BLI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xH-sf-SEq">
@@ -91,7 +92,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MatchCell" rowHeight="61" id="nx3-Sj-yB4" customClass="MatchCell" customModule="My_Foresome" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="61" id="nx3-Sj-yB4" customClass="EventCell" customModule="Events_Demo_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nx3-Sj-yB4" id="xax-ot-FPR">
@@ -109,7 +110,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="golfMatchLabel" destination="U0N-qp-OPb" id="R78-Q9-ncc"/>
+                                            <outlet property="eventLabel" destination="U0N-qp-OPb" id="eXj-2w-VB4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -120,6 +121,7 @@
                                 <state key="normal" image="create event button"/>
                                 <connections>
                                     <action selector="createNewEvent:" destination="qj1-RG-NsH" eventType="touchUpInside" id="gbD-Wt-zMm"/>
+                                    <segue destination="WHz-Mw-EnO" kind="presentation" id="z1O-L2-hBt"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar layout" translatesAutoresizingMaskIntoConstraints="NO" id="PXY-Ss-5bw">
@@ -163,6 +165,83 @@
             </objects>
             <point key="canvasLocation" x="138" y="2346"/>
         </scene>
+        <!--Event View Controller-->
+        <scene sceneID="VqN-x0-CEZ">
+            <objects>
+                <viewController id="WHz-Mw-EnO" customClass="EventViewController" customModule="Events_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zuS-Rg-tkk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EVENT DATE &amp; TIME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRy-sH-uZh">
+                                <rect key="frame" x="33" y="432" width="309" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LOCATION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3x8-3O-e3E">
+                                <rect key="frame" x="33" y="489" width="309" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INVITE FRIENDS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFO-sQ-yyw">
+                                <rect key="frame" x="33" y="546" width="309" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upload image " translatesAutoresizingMaskIntoConstraints="NO" id="ql3-Px-tVO">
+                                <rect key="frame" x="33" y="170" width="348" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sVs-JG-L4L" appends="YES" id="b0I-1c-MAY"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EVENT NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zmZ-0d-BkX">
+                                <rect key="frame" x="33" y="128" width="348" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sO0-43-hmr">
+                                <rect key="frame" x="281" y="604" width="100" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="create new event button"/>
+                                <connections>
+                                    <action selector="createEventButton:" destination="WHz-Mw-EnO" eventType="touchUpInside" id="36u-RD-z51"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KId-u2-17q">
+                                <rect key="frame" x="20" y="65" width="122" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" image="discard event button"/>
+                                <connections>
+                                    <action selector="discardEventButton:" destination="WHz-Mw-EnO" eventType="touchUpInside" id="KWm-3A-XYS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Q5I-Fp-O0g"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateAndTimeTextField" destination="uRy-sH-uZh" id="DLn-7n-nOp"/>
+                        <outlet property="eventNameTextField" destination="zmZ-0d-BkX" id="dc0-de-0Vu"/>
+                        <outlet property="imageView" destination="ql3-Px-tVO" id="Kcu-Lt-K08"/>
+                        <outlet property="locationTextField" destination="3x8-3O-e3E" id="vXH-sJ-AqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aa-e9-Sy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sVs-JG-L4L">
+                    <connections>
+                        <action selector="onCameraButton:" destination="WHz-Mw-EnO" id="b9Z-eG-uao"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="548" y="3071"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="piz-k4-4hp">
             <objects>
@@ -205,12 +284,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tv-Zq-arJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="901"/>
+            <point key="canvasLocation" x="935" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="grk-3q-hva">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="OPn-HM-xoE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="EventNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="OPn-HM-xoE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eHn-qL-oNg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -223,14 +302,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izQ-1P-naU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="1618"/>
+            <point key="canvasLocation" x="548" y="852"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar layout" width="369" height="348"/>
         <image name="create event button" width="66" height="66"/>
+        <image name="create new event button" width="100" height="37"/>
+        <image name="discard event button" width="100" height="37"/>
         <image name="event list" width="369" height="55"/>
         <image name="month back button" width="46" height="46"/>
         <image name="month forward button" width="46" height="46"/>
+        <image name="upload image " width="79" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tBN-Xf-BLI"/>
+    </inferredMetricsTieBreakers>
 </document>
