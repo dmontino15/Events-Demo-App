@@ -90,5 +90,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    //     Find the selected event
+        let selectedCell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: selectedCell)!
+        let selectedEvent = events[indexPath.row]
+        
+    //     pass the selected event to the match details view controller
+        let eventDetailsViewController = segue.destination as! EventDetailsViewController
+        eventDetailsViewController.event = selectedEvent
+    }
   
 }

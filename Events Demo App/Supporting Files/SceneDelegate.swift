@@ -21,9 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "Main", bundle: nil)
-            let myForesomeNavigationController = main.instantiateViewController(withIdentifier: "EventNavigationController")
+            let eventNavigationController = main.instantiateViewController(withIdentifier: "EventNavigationController")
             
-            window?.rootViewController = myForesomeNavigationController
+            window?.rootViewController = eventNavigationController
         }
         
         //guard let _ = (scene as? UIWindowScene) else { return }
