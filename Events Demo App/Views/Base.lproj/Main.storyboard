@@ -169,7 +169,7 @@
         <!--Event Details View Controller-->
         <scene sceneID="vU4-Rd-Lks">
             <objects>
-                <viewController id="ZWx-bR-GtB" customClass="EventDetailsViewController" customModule="Events_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ZWx-bR-GtB" customClass="EventDetailsViewController" customModule="Events_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ta9-yF-arX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,14 +218,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pM5-Mk-eGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="2317"/>
+            <point key="canvasLocation" x="138" y="2317"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="VqN-x0-CEZ">
             <objects>
-                <viewController id="WHz-Mw-EnO" customClass="EventViewController" customModule="Events_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="WHz-Mw-EnO" customClass="EventViewController" customModule="Events_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zuS-Rg-tkk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EVENT DATE &amp; TIME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRy-sH-uZh">
@@ -295,7 +295,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="814" y="2317"/>
+            <point key="canvasLocation" x="935" y="2317"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="piz-k4-4hp">
